@@ -1,6 +1,6 @@
 # Webapp--BIke-Usage-
 
-* This is a sample webapp I built which gives real-time predictions of how many bikes a bike renting company will rent out depending on the weather, mainly depending on:
+* This is a sample webapp I built which gives real-time predictions of how many bikes a bike renting company will rent out depending on the weather. It depend mainly on 3 environmental variables:
   1. Temperature
   2. Humidity
   3. Windspeed.
