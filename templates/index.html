@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Bike Usage Model</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="login">
+        <h1>Predict bike usage</h1>
+            <h3>Enter the following values to predict the number of bikes that will be rented out</h3>
+
+        <!--Main input for recieving query into our ML Webapp-->
+        <form action="{{ url_for('predict') }}" method = 'POST'>
+            <input type='text' name='temperature' placeholder='Temperature, e.g 1.343' required='required' />
+            <input type='text' name='humidity' placeholder='Humidity, e.g 43.434' required='required' />
+            <input type='text' name='windspeed' placeholder='Windspeed, e.g 14.5434' requied='required' />
+            
+            <button type='submit' class='btn'>Predict</button>
+        </form> 
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
+</body>
+</html>
